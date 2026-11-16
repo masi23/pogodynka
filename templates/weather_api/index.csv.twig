@@ -1,0 +1,8 @@
+
+    name,state,date,temperature,fahrenheit,rain_mm,pressure</br>
+    
+    {% for m in measurements %}
+
+        {{name}},{{state}},{{ m.date|date('d.m.Y') }},{{ m.temperature }}, {{m.fahrenheit}},{{m.rain_mm}},{{m.pressure}}</br>
+
+    {% endfor %}

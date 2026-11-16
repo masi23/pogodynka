@@ -1,0 +1,15 @@
+{
+    "name": "{{ name }}",
+    "state": "{{ state }}",
+    "measurements": [
+        {% for m in measurements %}
+            {
+                "date": "{{ m.date|date('d.m.Y') }}",
+                "temperature": {{ m.temperature }},
+                "fahrenheit": {{m.fahrenheit}}
+                "rain_mm": {{ m.rain_mm }},
+                "pressure": {{ m.pressure }}
+            }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}

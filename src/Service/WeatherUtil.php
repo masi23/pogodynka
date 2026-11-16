@@ -44,7 +44,7 @@ class WeatherUtil
 
      */
 
-    public function getWeatherForCountryAndCity(string $state, string $name): array
+    public function getWeatherForStateAndCity(string $state, string $name): array
 
     {
         $location = $this->locationRepository->findOneBy([
